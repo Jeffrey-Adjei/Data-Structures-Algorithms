@@ -13,10 +13,10 @@ class Stack:
         if self.isEmpty():
             return "The stack is empty!"
         else:
-            return self.stack.pop()
+            print(f"{self.stack.pop()} has been removed from the top of your stack")
                    
     def peek(self):
-        print(f"{self.stack[0]} is at the top of your stack!")
+        print(f"{self.stack[-1]} is at the top of your stack")
 
     def isEmpty(self):
         if len(self.stack) == 0:
@@ -32,7 +32,9 @@ mystack = Stack()
 mystack.push("Jujutsu Kaisen")
 mystack.push("Bleach")
 mystack.push("Naruto")
-mystack.push("Jojos Bizzare Adventures")
 mystack.push("One Piece")
+mystack.push("Jojos Bizzare Adventure")
 mystack.pop()
-print(mystack.stack())
+mystack.peek()
+print(mystack.isEmpty())
+mystack.size()
